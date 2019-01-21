@@ -28,7 +28,7 @@ const Navigation = () => (
                     }}
                 />
             </div>
-            <div className="navigation__container--links">
+            <div className="navigation__container--links" style={{zIndex: 2}}>
                 <Link href="/">
                     <a style={linkStyle}>Home</a>
                 </Link>
