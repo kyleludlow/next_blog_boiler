@@ -1,0 +1,30 @@
+{
+  "name": "roam-the-divine",
+  "version": "1.0.0",
+  "description": "Personal blog for Taylor Lewis",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "postinstall": "npm run getcontent",
+    "getcontent": "babel-node helpers/getcontent.js install"
+  },
+  "author": "Eddie Duro",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-cli": "^6.26.0",
+    "contentful": "^7.0.6",
+    "fs": "0.0.1-security",
+    "isomorphic-fetch": "^2.2.1",
+    "next": "^7.0.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.2.2"
+  }
+}
