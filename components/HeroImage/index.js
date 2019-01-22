@@ -22,6 +22,7 @@ const HeroImage = ({img, children}) => {
             .hero__title--container {
                 position: absolute;
                 color: white;
+                left: 0;
             }
             `}</style>
         </div>

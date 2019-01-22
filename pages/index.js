@@ -1,5 +1,5 @@
 import Layout from '../components/Layout'
-import PostLink from '../components/Posts/PostLink'
+import Posts from '../components/Posts/Posts'
 import HeroImage from '../components/HeroImage'
 
 import {fetchLatestPosts, getFeaturedImage} from '../api/contentful'
@@ -9,11 +9,11 @@ const IndexPage = ({ posts, img }) => {
         <div>
             <Layout>
                 <HeroImage img={img}><img style={{width: '100%'}} src="/static/roam-the-divine-logo-white.png"/></HeroImage>
-                <ul>
+                <div style={{ display: 'flex', justifyContent: 'space-between', margin: '40px'}}>
                     {posts.map((post, index) =>
-                        <PostLink title={post.fields.title} key={index}/>
+                        <Posts post={post} index={index}/>
                     )}
-                </ul>
+                </div>
             </Layout>
         </div>
     )

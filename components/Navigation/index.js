@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const linkStyle = {
     padding: '0px 12px',
-    borderRight: '1px solid grey'
+    borderRight: '1px solid #dddddd'
 }
 
 const socialStyle = {
@@ -23,7 +23,7 @@ const Navigation = () => (
                         position: 'absolute',
                         left: 0,
                         top: 0,
-                        margin: '12px 24px',
+                        margin: '12px 40px',
                         height: '48px'
                     }}
                 />
