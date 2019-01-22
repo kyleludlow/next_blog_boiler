@@ -19,6 +19,7 @@
     "contentful": "^7.0.6",
     "fs": "0.0.1-security",
     "isomorphic-fetch": "^2.2.1",
+    "moment": "^2.24.0",
     "next": "^7.0.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"

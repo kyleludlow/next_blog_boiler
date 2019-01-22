@@ -2,9 +2,24 @@ import fetch from 'isomorphic-fetch'
 
 import ContentfulClient from '../../helpers/contentfulClient'
 
+export const fetchHomePagePosts = async () => {
+    const entries = await ContentfulClient.getEntries({
+        content_type: 'pageHome',
+        limit: 6,
+        order: 'sys.createdAt'
+    })
+    if (entries.total === 1) {
+        const { fields } = entries.items[0]
+        return fields;
+    } else if (entries.total > 1) {
+        return entries.items;
+    }
+    return false
+}
+
 export const fetchLatestPosts = async () => {
         const entries = await ContentfulClient.getEntries({
-            content_type: 'blogPosts',
+            content_type: 'blogPost',
             limit: 6
         })
         if (entries.total === 1) {
