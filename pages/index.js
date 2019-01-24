@@ -2,10 +2,19 @@ import Layout from '../components/Layout'
 import Posts from '../components/Posts/Posts'
 import HeroImage from '../components/HeroImage'
 
+import Head from 'next/head'
+
 import { fetchLatestPosts, getFeaturedImage, fetchHomePagePosts } from '../api/contentful'
 const IndexPage = ({ posts, img }) => {
     return (
         <div>
+            <Head>
+                <title>Roam the Divine</title>
+                <meta
+                property="og:description"
+                content="Roam the divine, travel blog."
+                />
+            </Head>
             <Layout>
                 <HeroImage img={img}><img style={{width: '100%'}} src="/static/roam-the-divine-logo-white.png"/></HeroImage>
                 <div className="container">
@@ -51,7 +60,6 @@ IndexPage.getInitialProps = async ({ req }) => {
     const posts = await fetchLatestPosts()
     const img = await getFeaturedImage()
     const featuredPosts = await fetchHomePagePosts()
-    console.log('breh', featuredPosts)
     return {
         posts: posts,
         img: img

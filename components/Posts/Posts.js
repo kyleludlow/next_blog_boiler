@@ -7,8 +7,10 @@ const Posts = ({post}) => {
     const title = post.fields.title;
     const previewImg = post.fields.heroImage.fields.file.url
     const formattedDate = moment(post.fields.publishDate).format('MMM D Y');
-    const author = post.fields.author.fields.name;
-    console.log(post)
+    const author = post.fields.author.fields.name
+    post.fields.tags.map(tag => {
+        console.log(tag)
+    })
     return (
         <div className="post__preview--container">
             <div className="post__preview--img-container">
@@ -19,6 +21,7 @@ const Posts = ({post}) => {
                     {formattedDate},
                 </span>
                 <span className="type__subheader" style={{paddingLeft: '8px'}}> {author} </span>
+                {post.fields.tags.map((tag) => <span className="type__subheader post__tag" style={{ position: 'relative', paddingLeft: '16px' }}> {tag} </span>)}
             </div>
             <div className="post__preview--title">
                 <PostLink title={title} />
@@ -43,6 +46,16 @@ const Posts = ({post}) => {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+            }
+            .post__preview--subheader-container span:nth-child(2):after {
+                content: " ";
+                border-top: 2px solid #dddddd;
+                width: 60px;
+                position: absolute;
+                margin: 9px 16px;
+            }
+            .post__tag {
+                padding-left: 96px !important;
             }
             @media(max-width: 1333px) {
                 .post__preview--container {
