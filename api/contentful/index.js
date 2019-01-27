@@ -14,7 +14,7 @@ export const fetchHomePagePosts = async () => {
     } else if (entries.total > 1) {
         return entries.items;
     }
-    return false
+    return false;
 }
 
 export const fetchLatestPosts = async () => {
@@ -23,12 +23,12 @@ export const fetchLatestPosts = async () => {
             limit: 6
         })
         if (entries.total === 1) {
-            const { fields } = entries.items[0]
+            const { fields } = entries.items[0];
             return fields;
         } else if (entries.total > 1) {
             return entries.items;
         }
-        return false
+        return false;
 }
 
 export const fetchPosts = async () => {
@@ -41,7 +41,7 @@ export const fetchPosts = async () => {
     } else if (entries.total > 1) {
         return entries.items;
     }
-    return false
+    return false;
 }
 
 export const getPost = (slug) => {
@@ -67,7 +67,7 @@ export const getFeaturedImage = async () => {
         content_type: 'featuredImage'
     })
     if (entries.total === 1) {
-        const { fields } = entries.items[0]
+        const { fields } = entries.items[0];
         return fields;
     }
     return false

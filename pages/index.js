@@ -33,7 +33,6 @@ const IndexPage = ({ posts, img }) => {
                 <Menu/>
                 <Header/>
 
-                {/* <HeroImage img={img}><img style={{width: '100%'}} src="/static/roam-the-divine-logo-white.png"/></HeroImage> */}
                 <div className="container">
                     <section className="featured-posts">
                         <div className='flex-wrapper'>

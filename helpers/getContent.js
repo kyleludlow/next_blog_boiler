@@ -6,15 +6,13 @@ const SPACE = process.env.CONTENTFUL_SPACE
 const TOKEN = process.env.CONTENTFUL_TOKEN
 
 const client = createClient({
-    space: 'm2dkdjsf2sd8',
-    accessToken: '62eac09be8d04ece6619bf02ef347caed78460c0383c8d50295d5f5b6f4c8de0'
+    space: 'zcrgayrz1f7o',
+    accessToken: '625f2bf0f0ca3cac9eebf3601ef08a47229289c8f6149a0a5acd9907b86a7e8c'
 })
 
 const types = [
-    'pageHome',
-    'pageAbout',
-    'blogPosts'
-]
+    'BlogPost'
+];
 
 export const getcontent = async () => {
     console.log('> Starting import...')
