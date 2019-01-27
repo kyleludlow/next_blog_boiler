@@ -9,7 +9,7 @@
     "start": "next start",
     "now-build": "next build && next export -o dist"
   },
-  "author": "Eddie Duro",
+  "author": "Kyle Ludlow",
   "license": "ISC",
   "dependencies": {
     "@babel/cli": "^7.1.2",
