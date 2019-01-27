@@ -1,19 +1,33 @@
 import Layout from '../components/Layout'
 import Posts from '../components/Posts/Posts'
 import HeroImage from '../components/HeroImage'
+import Footer from '../components/Footer'
 
 import Head from 'next/head'
+
 
 import { fetchLatestPosts, getFeaturedImage, fetchHomePagePosts } from '../api/contentful'
 const IndexPage = ({ posts, img }) => {
     return (
         <div>
             <Head>
-                <title>Roam the Divine</title>
-                <meta
-                property="og:description"
-                content="Roam the divine, travel blog."
-                />
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+                <title>Cabe - Minimal and Clean Personal Blog Template</title>
+                <meta name="description" content="Cabe - Minimal and Clean Personal Blog Template"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+                <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png"/>
+
+                {/* <!-- STYLESHEETS --> */}
+                <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"/>
+                <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all"/>
+
+                <link rel="stylesheet" href="css/font-awesome.min.css"/>
+
+
+                <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+                <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
+                <link rel="stylesheet" href="css/style.css" type="text/css" media="all"/>
+
             </Head>
             <Layout>
                 <HeroImage img={img}><img style={{width: '100%'}} src="/static/roam-the-divine-logo-white.png"/></HeroImage>
@@ -30,6 +44,8 @@ const IndexPage = ({ posts, img }) => {
                     </div>
                     <section className="instagram-section">
                     </section>
+                    <Footer/>
+                    
                 </div>
             </Layout>
             <style jsx>{`
