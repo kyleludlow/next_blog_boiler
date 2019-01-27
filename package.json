@@ -1,7 +1,7 @@
 {
-  "name": "roam-the-divine",
+  "name": "next_blog_boiler",
   "version": "1.0.0",
-  "description": "Personal blog for Taylor Lewis",
+  "description": "Personal blog boiler for clients",
   "main": "index.js",
   "scripts": {
     "dev": "next",

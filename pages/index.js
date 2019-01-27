@@ -2,6 +2,7 @@ import Layout from '../components/Layout'
 import Posts from '../components/Posts/Posts'
 import HeroImage from '../components/HeroImage'
 import Footer from '../components/Footer'
+import Preload from '../components/Preload'
 
 import Head from 'next/head'
 
@@ -31,7 +32,9 @@ const IndexPage = ({ posts, img }) => {
 
             </Head>
             <Layout>
-                <HeroImage img={img}><img style={{width: '100%'}} src="/static/roam-the-divine-logo-white.png"/></HeroImage>
+                <Preload/>
+
+                {/* <HeroImage img={img}><img style={{width: '100%'}} src="/static/roam-the-divine-logo-white.png"/></HeroImage> */}
                 <div className="container">
                     <section className="featured-posts">
                         <div className='flex-wrapper'>
@@ -48,6 +51,10 @@ const IndexPage = ({ posts, img }) => {
                     <Footer/>
                     
                 </div>
+                <script src="static/jquery-1.12.3.min.js"></script>
+                <script src="static/popper.min.js"></script>
+                <script src="static/plugin.js"></script>
+                <script src="static/main.js"></script>
             </Layout>
             <style jsx>{`
             .container {
