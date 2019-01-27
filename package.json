@@ -1,14 +1,13 @@
 {
-  "name": "roam-the-divine",
+  "name": "next_blog_boiler",
   "version": "1.0.0",
-  "description": "Personal blog for Taylor Lewis",
+  "description": "Personal blog boiler for clients",
   "main": "index.js",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "postinstall": "npm run getcontent",
-    "getcontent": "babel-node helpers/getcontent.js install"
+    "now-build": "next build && next export -o dist"
   },
   "author": "Eddie Duro",
   "license": "ISC",
@@ -16,10 +15,12 @@
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
+    "@zeit/next-css": "^1.0.1",
     "babel-cli": "^6.26.0",
     "contentful": "^7.0.6",
     "fs": "0.0.1-security",
     "isomorphic-fetch": "^2.2.1",
+    "moment": "^2.24.0",
     "next": "^7.0.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
