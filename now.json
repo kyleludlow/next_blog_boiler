@@ -1,5 +1,5 @@
 {
-    "name": "roam-the-divine",
+    "name": "morgan-ludlow",
     "version": 2,
     "builds": [
         {
@@ -7,5 +7,5 @@
             "use": "@now/static-build"
         }
     ],
-    "alias": ["roamthedivie.com"]
+    "alias": ["morganludlow.io"]
 }

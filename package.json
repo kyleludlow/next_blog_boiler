@@ -15,6 +15,7 @@
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
+    "@zeit/next-css": "^1.0.1",
     "babel-cli": "^6.26.0",
     "contentful": "^7.0.6",
     "fs": "0.0.1-security",

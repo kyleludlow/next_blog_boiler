@@ -1,4 +1,5 @@
 const Footer = ({children}) => {
+
     return (
         <section className="footer-wrapper pad-75 bg-lightblue">
             <div className="container">

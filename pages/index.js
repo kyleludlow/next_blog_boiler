@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 
 import Head from 'next/head'
 
+// import '../css/style.css';
 
 import { fetchLatestPosts, getFeaturedImage, fetchHomePagePosts } from '../api/contentful'
 const IndexPage = ({ posts, img }) => {
@@ -19,14 +20,14 @@ const IndexPage = ({ posts, img }) => {
 
                 {/* <!-- STYLESHEETS --> */}
                 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"/>
-                <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all"/>
+                <link rel="stylesheet" href="static/bootstrap.min.css" type="text/css" media="all"/>
 
-                <link rel="stylesheet" href="css/font-awesome.min.css"/>
+                <link rel="stylesheet" href="static/font-awesome.min.css"/>
 
 
-                <link rel="stylesheet" href="css/owl.carousel.min.css"/>
-                <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
-                <link rel="stylesheet" href="css/style.css" type="text/css" media="all"/>
+                <link rel="stylesheet" href="static/owl.carousel.min.css"/>
+                <link rel="stylesheet" href="static/owl.theme.default.min.css"/>
+                <link rel="stylesheet" href="static/style.css" type="text/css" media="all"/>
 
             </Head>
             <Layout>
@@ -73,13 +74,13 @@ const IndexPage = ({ posts, img }) => {
 }
 
 IndexPage.getInitialProps = async ({ req }) => {
-    const posts = await fetchLatestPosts()
-    const img = await getFeaturedImage()
-    const featuredPosts = await fetchHomePagePosts()
+    const posts = await fetchLatestPosts();
+    const img = await getFeaturedImage();
+    const featuredPosts = await fetchHomePagePosts();
     return {
         posts: posts,
         img: img
-    }
+    };
 }
 
 export default IndexPage
