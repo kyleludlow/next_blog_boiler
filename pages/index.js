@@ -1,9 +1,9 @@
 import Layout from '../components/Layout'
 import Posts from '../components/Posts/Posts'
-import HeroImage from '../components/HeroImage'
 import Footer from '../components/Footer'
 import Preload from '../components/Preload'
 import Menu from '../components/Menu'
+import Header from '../components/Header'
 
 import Head from 'next/head'
 
@@ -21,18 +21,17 @@ const IndexPage = ({ posts, img }) => {
                 {/* <!-- STYLESHEETS --> */}
                 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"/>
                 <link rel="stylesheet" href="static/bootstrap.min.css" type="text/css" media="all"/>
+                <link rel="stylesheet" href="static/style.css" type="text/css" media="all"/>
 
                 <link rel="stylesheet" href="static/font-awesome.min.css"/>
-
-
                 <link rel="stylesheet" href="static/owl.carousel.min.css"/>
                 <link rel="stylesheet" href="static/owl.theme.default.min.css"/>
-                <link rel="stylesheet" href="static/style.css" type="text/css" media="all"/>
 
             </Head>
             <Layout>
                 <Preload/>
                 <Menu/>
+                <Header/>
 
                 {/* <HeroImage img={img}><img style={{width: '100%'}} src="/static/roam-the-divine-logo-white.png"/></HeroImage> */}
                 <div className="container">

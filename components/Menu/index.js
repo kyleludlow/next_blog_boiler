@@ -3,7 +3,7 @@ const Menu = ({}) => (
 		<div className="container-fluid">
 			<div className="row">
 				<div className="col-lg-3 col-md-12 col-xl-3 text-center pt-2">
-					<a href="index.html" className="logo"><img src="images/logo-2.png" alt="logo"/></a>
+					<a href="index.html" className="logo"><img src="static/logo-2.png" alt="logo"/></a>
 					<a href="#" className="menu-click"><span></span><span></span><span></span></a>
 				</div>
 				<div className="col-lg-6 col-xl-6">
