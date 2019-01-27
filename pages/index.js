@@ -3,10 +3,9 @@ import Posts from '../components/Posts/Posts'
 import HeroImage from '../components/HeroImage'
 import Footer from '../components/Footer'
 import Preload from '../components/Preload'
+import Menu from '../components/Menu'
 
 import Head from 'next/head'
-
-// import '../css/style.css';
 
 import { fetchLatestPosts, getFeaturedImage, fetchHomePagePosts } from '../api/contentful'
 const IndexPage = ({ posts, img }) => {
@@ -33,6 +32,7 @@ const IndexPage = ({ posts, img }) => {
             </Head>
             <Layout>
                 <Preload/>
+                <Menu/>
 
                 {/* <HeroImage img={img}><img style={{width: '100%'}} src="/static/roam-the-divine-logo-white.png"/></HeroImage> */}
                 <div className="container">
@@ -56,26 +56,6 @@ const IndexPage = ({ posts, img }) => {
                 <script src="static/plugin.js"></script>
                 <script src="static/main.js"></script>
             </Layout>
-            <style jsx>{`
-            .container {
-                margin: 0 auto;
-            }
-            .flex-wrapper {
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: space-between;
-                margin: 40px;
-            }
-            .button__container {
-                display: flex;
-                justify-content: center;
-            }
-            @media (max-width: 400px) {
-                .flex-wrapper {
-                    display: block;
-                }
-            }
-            `}</style>
         </div>
     )
 }
