@@ -4,12 +4,11 @@ import ContentfulClient from '../../helpers/contentfulClient'
 
 export const fetchHomePagePosts = async () => {
     const entries = await ContentfulClient.getEntries({
-        content_type: 'pageHome',
+        content_type: 'blogPost',
         limit: 6,
-        order: 'sys.createdAt'
     })
     if (entries.total === 1) {
-        const { fields } = entries.items[0]
+        const { fields } = entries.items[0];
         return fields;
     } else if (entries.total > 1) {
         return entries.items;
@@ -33,7 +32,7 @@ export const fetchLatestPosts = async () => {
 
 export const fetchPosts = async () => {
     const entries = await ContentfulClient.getEntries({
-        content_type: 'blogPosts'
+        content_type: 'blogPost'
     })
     if (entries.total === 1) {
         const { fields } = entries.items[0]
@@ -62,13 +61,13 @@ export const getAboutPageContent = async () => {
     return false
 }
 
-export const getFeaturedImage = async () => {
-    const entries = await ContentfulClient.getEntries({
-        content_type: 'featuredImage'
-    })
-    if (entries.total === 1) {
-        const { fields } = entries.items[0];
-        return fields;
-    }
-    return false
-}
+// export const getFeaturedImage = async () => {
+//     const entries = await ContentfulClient.getEntries({
+//         content_type: 'featuredImage'
+//     })
+//     if (entries.total === 1) {
+//         const { fields } = entries.items[0];
+//         return fields;
+//     }
+//     return false;
+// }

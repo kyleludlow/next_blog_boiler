@@ -11,7 +11,7 @@ const client = createClient({
 })
 
 const types = [
-    'BlogPost'
+    'blogPost'
 ];
 
 export const getcontent = async () => {
@@ -31,9 +31,9 @@ export const getcontent = async () => {
             console.log('> Content gotten and written for', type)
         }
     }
-    return true
+    return true;
 }
 
 if (process.argv[2] === 'install') {
-    getcontent()
+    getcontent();
 }

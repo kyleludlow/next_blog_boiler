@@ -1,9 +1,10 @@
 import Layout from '../components/Layout'
-import Posts from '../components/Posts/Posts'
+// import Posts from '../components/Posts/Posts'
 import Footer from '../components/Footer'
 import Preload from '../components/Preload'
 import Menu from '../components/Menu'
 import Header from '../components/Header'
+import Posts from '../components/Posts/Posts.js'
 
 import Head from 'next/head'
 
@@ -32,23 +33,13 @@ const IndexPage = ({ posts, img }) => {
                 <Preload/>
                 <Menu/>
                 <Header/>
+                <Posts/>
 
-                <div className="container">
-                    <section className="featured-posts">
-                        <div className='flex-wrapper'>
-                            {posts.map((post, index) =>
-                                <Posts post={post} index={index}/>
-                                )}
-                        </div>
-                    </section>
-                    <div className="button__container">
-                        <input className="button button--lg button--lg-primary" type="button" value="older posts"/>
-                    </div>
-                    <section className="instagram-section">
-                    </section>
+                {/* <div className="container"
+                    </section> */}
                     <Footer/>
                     
-                </div>
+                {/* </div> */}
                 <script src="static/jquery-1.12.3.min.js"></script>
                 <script src="static/popper.min.js"></script>
                 <script src="static/plugin.js"></script>
@@ -60,12 +51,12 @@ const IndexPage = ({ posts, img }) => {
 
 IndexPage.getInitialProps = async ({ req }) => {
     const posts = await fetchLatestPosts();
-    const img = await getFeaturedImage();
+    // const img = await getFeaturedImage();
     const featuredPosts = await fetchHomePagePosts();
     return {
         posts: posts,
-        img: img
+        // img: img
     };
 }
 
-export default IndexPage
+export default IndexPage;
